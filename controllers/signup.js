@@ -15,7 +15,7 @@ const handleSignup = (req, res, bcryptjs, dbaseSql) => {
             .then( returnedId => {
                 return trx('users')
                     .insert({
-                        displayName: displayName,
+                        displayname: displayName,
                         email: email,
                         joined: new Date(),
                         idlogin: returnedId[0],
